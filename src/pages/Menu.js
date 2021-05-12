@@ -85,7 +85,7 @@ function Menu() {
       <article className='menu'>
         <h2 className='heading-2'>Our Menu</h2>
         <div className='container'>
-          <Filter />
+          {/* <Filter /> */}
           <div>
             <MenuSection title='Salad' type='salad' />
             <MenuSection title='Pastry' type='pastry' />
