@@ -86,7 +86,7 @@ function Menu() {
         <h2 className='heading-2'>Our Menu</h2>
         <div className='container'>
           {/* <Filter /> */}
-          <div>
+          {/* <div> */}
             <MenuSection title='Salad' type='salad' />
             <MenuSection title='Pastry' type='pastry' />
             <MenuSection title='Sandwich' type='sandwich' />
@@ -97,7 +97,7 @@ function Menu() {
             <MenuSection title='Bread' type='bread' />
             <MenuSection title='Hot Drink' type='hotdrink' />
             {allProducts.length === 0 && <Spinner />}
-          </div>
+          {/* </div> */}
         </div>
       </article>
     </Wrapper>
