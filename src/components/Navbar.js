@@ -51,6 +51,8 @@ const Wrapper = styled.header`
 
       & .logo {
         font-size: 3rem;
+        color: #fff;
+        text-decoration: none;
       }
 
       & .hamburger {
@@ -146,13 +148,22 @@ function Navbar() {
     <Wrapper>
       <header className='header' ref={container}>
         <nav className='navbar'>
-          <h3 className='logo'>LOGO</h3>
+          <h3>
+            <NavLink exact to='/' className='logo'>
+              LOGO
+            </NavLink>
+          </h3>
           <ul className={click ? 'items active' : 'items'}>
             {links.map((link) => {
               const { id, text, url } = link;
               return (
                 <li key={id}>
-                  <NavLink exact to={url} activeClassName='selected' onClick={handleClick}>
+                  <NavLink
+                    exact
+                    to={url}
+                    activeClassName='selected'
+                    onClick={handleClick}
+                  >
                     {text}
                   </NavLink>
                 </li>

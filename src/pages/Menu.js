@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { MenuSection, Spinner, Filter } from '../components/';
+import { MenuSection, Spinner, Filter, ScrollToTop } from '../components/';
 import { PainAuChocolat } from '../assets';
-import useFetchFirestore from '../useHooks/useFetchFirestore';
+import { useProductsContext } from '../context/products_context';
 
 const Wrapper = styled.section`
   .cover {
@@ -78,10 +78,11 @@ const Wrapper = styled.section`
 `;
 
 function Menu() {
-  const allProducts = useFetchFirestore();
+  const { products } = useProductsContext();
 
   return (
     <Wrapper>
+      <ScrollToTop />
       <div className='cover'></div>
       <article className='menu'>
         <h2 className='heading-2'>Our Menu</h2>
@@ -97,7 +98,7 @@ function Menu() {
             <MenuSection title='Cake' type='cake' />
             <MenuSection title='Bread' type='bread' />
             <MenuSection title='Hot Drink' type='hotdrink' />
-            {allProducts.length === 0 && <Spinner />}
+            {products.length === 0 && <Spinner />}
           </div>
         </div>
       </article>

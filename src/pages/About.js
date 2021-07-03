@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Baker } from '../assets';
+import { ScrollToTop } from '../components';
 
 const Wrapper = styled.article`
   .about {
@@ -51,6 +52,7 @@ const Wrapper = styled.article`
 function About() {
   return (
     <Wrapper>
+      <ScrollToTop />
       <article className='about'>
         <div className='container-img'>
           <img src={Baker} alt='baker' />

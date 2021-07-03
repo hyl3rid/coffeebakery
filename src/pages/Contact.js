@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { BakeryOutside } from '../assets';
-import Form from '../components/Form';
-import MyMap from '../components/MyMap';
+import { ScrollToTop, MyMap, Form } from '../components';
 
 const Wrapper = styled.section`
   .contact {
@@ -50,6 +49,7 @@ const Wrapper = styled.section`
 function Contact() {
   return (
     <Wrapper>
+      <ScrollToTop />
       <section className='contact'>
         <h2 className='heading-2'>Contact Us</h2>
         <div className='container-form'>

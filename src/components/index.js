@@ -11,6 +11,7 @@ import MenuSection from './MenuSection';
 import Modal from './Modal';
 import MyMap from './MyMap';
 import Spinner from './Spinner';
+import ScrollToTop from './ScrollToTop';
 
 export {
   Navbar,
@@ -26,4 +27,5 @@ export {
   Modal,
   MyMap,
   Spinner,
+  ScrollToTop,
 };

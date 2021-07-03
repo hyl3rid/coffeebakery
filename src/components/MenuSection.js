@@ -1,10 +1,9 @@
 import React from 'react';
 import MenuProduct from './MenuProduct';
-import useFetchFirestore from '../useHooks/useFetchFirestore';
-import styled from 'styled-components';
+import { useProductsContext } from '../context/products_context';
 
 const MenuSection = ({ title, type }) => {
-  const allProducts = useFetchFirestore();
+  const { products: allProducts } = useProductsContext();
   const products = allProducts.filter((p) => p.type === type);
   return (
     <section>
