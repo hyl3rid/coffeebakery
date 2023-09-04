@@ -22,6 +22,10 @@ const Wrapper = styled.article`
       }
     }
 
+    & .container-text {
+      padding: 0 2.5rem;
+    }
+
     & .heading-2 {
       text-align: center;
       margin-bottom: 2.5rem;
@@ -34,10 +38,11 @@ const Wrapper = styled.article`
 
   @media only screen and (max-width: 1000px) {
     .about {
+      margin-top: 0;
       grid-template-columns: 1fr;
 
-      & img {
-        display: none;
+      & .container-img {
+        width: 100%;
       }
     }
   }
@@ -57,7 +62,7 @@ function About() {
         <div className='container-img'>
           <img src={Baker} alt='baker' />
         </div>
-        <div>
+        <div className='container-text'>
           <h2 className='heading-2'>History</h2>
           <p>
             Integer tincidunt rutrum lorem, eu tempor metus pulvinar et. Integer

@@ -34,13 +34,19 @@ const Wrapper = styled.section`
   }
 
   @media only screen and (max-width: 600px) {
+    .contact {
+      padding: 4rem;
+    }
     .contact .container-form {
       display: grid;
       grid-template-columns: 1fr;
       justify-items: center;
+      margin-bottom: 5rem;
 
       & img {
-        display: none;
+        grid-row-start: 1;
+        display: block;
+        padding-bottom: 2.5rem;
       }
     }
   }
