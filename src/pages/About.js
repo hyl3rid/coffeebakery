@@ -43,6 +43,7 @@ const Wrapper = styled.article`
 
       & .container-img {
         width: 100%;
+        padding-bottom: 2.5rem;
       }
     }
   }
