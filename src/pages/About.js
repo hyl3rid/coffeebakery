@@ -13,7 +13,6 @@ const Wrapper = styled.article`
 
     & .container-img {
       justify-self: center;
-      width: 80%;
       max-width: 40rem;
 
       & img {
@@ -42,7 +41,7 @@ const Wrapper = styled.article`
       grid-template-columns: 1fr;
 
       & .container-img {
-        width: 100%;
+        max-width: 100%;
         padding-bottom: 2.5rem;
       }
     }
@@ -50,7 +49,7 @@ const Wrapper = styled.article`
 
   @media only screen and (max-width: 600px) {
     .about {
-      padding: 10rem 0;
+      padding: 9rem 0 5rem;
     }
   }
 `;
